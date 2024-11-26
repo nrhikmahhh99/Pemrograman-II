@@ -5,10 +5,8 @@ import java.util.*;
 public class Soal2Main {
 	public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        for (int run = 1; run <= 2; run++) {
-	        LinkedList<Negara> daftarNegara = new LinkedList<>();
-	        HashMap<Integer, String> daftarBulan = new HashMap<>();
+        LinkedList<Negara> daftarNegara = new LinkedList<>();
+	    HashMap<Integer, String> daftarBulan = new HashMap<>();
 
 	        // Inisialisasi nama bulan
 	        daftarBulan.put(1, "Januari");
@@ -58,6 +56,5 @@ public class Soal2Main {
 	            System.out.println(negara.getDetail(daftarBulan));
 	            System.out.println();
 	        }
-	    }
 	}
 }
