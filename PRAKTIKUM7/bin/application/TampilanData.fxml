@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TampilanDataController">
+  <tabs>
+    <Tab text="Data Pelanggan">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="378.0" prefWidth="606.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Nama" wrapText="true" />
+                              <TextField fx:id="namaPelangganField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Email" wrapText="true" />
+                              <TextField fx:id="emailPelangganField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="72.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Telepon" wrapText="true" />
+                              <TextField fx:id="teleponPelangganField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="606.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="84.0">
+                                 <children>
+                                    <Button fx:id="buttonAddPelanggan" mnemonicParsing="false" onAction="#handleAddPelanggan" text="Add" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="43.0">
+                                 <children>
+                                    <Button fx:id="buttonEditPelanggan" mnemonicParsing="false" onAction="#handleEditPelanggan" text="Edit" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="98.0">
+                                 <children>
+                                    <Button fx:id="buttonDeletePelanggan" mnemonicParsing="false" onAction="#handleDeletePelanggan" text="Delete" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tabelPelanggan" onSort="#initialize" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="kolomNamaPelanggan" prefWidth="75.0" text="Nama" />
+                            <TableColumn fx:id="kolomEmailPelanggan" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="kolomTeleponPelanggan" prefWidth="141.60003662109375" text="Telepon" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Data Buku">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="378.0" prefWidth="606.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Judul" wrapText="true" />
+                              <TextField fx:id="judulBukuField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Penulis" wrapText="true" />
+                              <TextField fx:id="penulisBukuField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="72.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Harga" wrapText="true" />
+                              <TextField fx:id="hargaBukuField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="101.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Stok" wrapText="true" />
+                              <TextField fx:id="stokBukuField" prefHeight="26.0" prefWidth="182.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="606.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="84.0">
+                                 <children>
+                                    <Button fx:id="buttonAddBuku" mnemonicParsing="false" onAction="#handleAddBuku" text="Add" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="43.0">
+                                 <children>
+                                    <Button fx:id="buttonEditBuku" mnemonicParsing="false" onAction="#handleEditBuku" text="Edit" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="98.0">
+                                 <children>
+                                    <Button fx:id="buttonDeleteBuku" mnemonicParsing="false" onAction="#handleDeleteBuku" text="Delete" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tabelBuku" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="kolomJudulBuku" prefWidth="75.0" text="Judul" />
+                            <TableColumn fx:id="kolomPenulisBuku" prefWidth="75.0" text="Penulis" />
+                              <TableColumn fx:id="kolomHargaBuku" prefWidth="75.0" text="Harga" />
+                              <TableColumn fx:id="kolomStokBuku" prefWidth="75.0" text="Stok" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Data Penjualan">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="378.0" prefWidth="606.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="142.0" text="Jumlah" wrapText="true" />
+                              <TextField fx:id="jumlahPenjualanField" prefHeight="26.0" prefWidth="173.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="144.0" text="Total Harga" wrapText="true" />
+                              <TextField fx:id="totalHargaPenjualanField" prefHeight="26.0" prefWidth="174.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="72.0" prefHeight="45.0" prefWidth="606.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="145.0" text="Tanggal" wrapText="true" />
+                              <TextField fx:id="tanggalPenjualanField" prefHeight="26.0" prefWidth="171.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="606.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="84.0">
+                                 <children>
+                                    <Button fx:id="buttonAddPenjualan" mnemonicParsing="false" onAction="#handleAddPenjualan" text="Add" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="43.0">
+                                 <children>
+                                    <Button fx:id="buttonEditPenjualan" mnemonicParsing="false" onAction="#handleEditPenjualan" text="Edit" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="98.0">
+                                 <children>
+                                    <Button fx:id="buttonDeletePenjualan" mnemonicParsing="false" onAction="#handleDeletePenjualan" text="Delete" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tabelPenjualan" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="kolomJumlahPenjualan" prefWidth="130.4000244140625" text="Jumah" />
+                              <TableColumn fx:id="kolomHargaPenjualan" prefWidth="95.20001220703125" text="Total Harga" />
+                              <TableColumn fx:id="kolomTanggalPenjualan" prefWidth="134.4000244140625" text="Tanggal" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
